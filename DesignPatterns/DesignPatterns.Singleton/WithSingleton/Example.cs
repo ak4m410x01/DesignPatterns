@@ -4,22 +4,17 @@
     {
         public static void Run()
         {
-            Counter counter1 = Counter.Instance;
-            Counter counter2 = Counter.Instance;
+            Singleton singleton1 = Singleton.Instance;
+            Singleton singleton2 = Singleton.Instance;
 
-            counter1.AddCount();
-            counter2.AddCount();
-
-            Console.WriteLine($"Counter1: {counter1.Count}");
-            Console.WriteLine($"Counter2: {counter2.Count}");
-            Console.WriteLine("-------------------------------------------------");
-            Console.WriteLine();
-
-            counter1.AddCount();
-
-            Console.WriteLine($"Counter1: {counter1.Count}");
-            Console.WriteLine($"Counter2: {counter2.Count}");
-            Console.WriteLine("-------------------------------------------------");
+            if (singleton1 == singleton2)
+            {
+                Console.WriteLine("Objects has the same instance.");
+            }
+            else
+            {
+                Console.WriteLine("Object not has the same instance.");
+            }
         }
     }
 }
