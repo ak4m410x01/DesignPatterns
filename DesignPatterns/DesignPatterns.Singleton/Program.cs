@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.Metrics;
-
-namespace DesignPatterns.Singleton
+﻿namespace DesignPatterns.Singleton
 {
     internal class Program
     {
@@ -14,6 +12,12 @@ namespace DesignPatterns.Singleton
             WithSingleton.Example.Run();
             Console.WriteLine("===============================================");
 
+
+            Console.WriteLine("With MultiThreading:-");
+            WithMultiThreading.Example.Run();
+            Console.WriteLine("===============================================");
+
+            Console.ReadKey();
         }
     }
 }
